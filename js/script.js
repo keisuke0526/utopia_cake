@@ -27,7 +27,6 @@ $(function () {
   });
 });
 
-
 // TOPへスクロール
 $(function () {
   var top = $('#top');
