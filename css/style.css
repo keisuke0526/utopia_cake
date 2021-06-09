@@ -4,10 +4,14 @@
 }
 body {
   font-family: "Apple Symbols","Segoe UI Emoji", "Hannotate SC","MS UIゴシック", sans-serif;
+  background-color: #e1f3f9;
 }
-@media screen and (max-width : 599px){
+@media screen and (max-width: 768px){
   .pc { display: none !important; }
   .sp { display: block !important; }
+  .top__right, .middle__left, .bottom__images { display: none !important; }
+
+  /* -----header----- */
 
   header {
     height: 600px;
@@ -18,11 +22,13 @@ body {
     transform: translate(0, -20px);
     transition: all 1s ease-out;
   }
+
   .header-wrapper {
     height: 25%;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 5%;
   }
+
   .header-nav__left {
     text-align: center;
   }
@@ -32,7 +38,7 @@ body {
   }
 
   .header-nav__right ul li {
-    font-size: 20px;
+    font-size: 1.5rem;
     display: inline-block;
     width: 20%;
     text-align: center;
@@ -42,6 +48,7 @@ body {
     color: #fff;
     text-decoration: none;
   }
+
   .header-nav__right ul li a:active {
     padding: 5%;
     background-color: #333;
@@ -60,13 +67,317 @@ body {
     transform: translate(-20px, 0);
     transition: all 1.5s ease-out;
   }
+
+/* -----topコンテンツ----- */
+
+  .top__right--sp {
+    height: 300px;
+    position: relative;
+  }
+
+  .top__right--sp img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .top__left {
+    height: 150px;
+    width: 100%;
+    position: relative;
+  }
+
+  .top__left--back {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    right: 0;
+  }
+
+  .top__left--back p {
+    font-size: 5.2em;
+    text-align: center;
+    color: #fff;
+  }
+
+  .top__left--front {
+    position: absolute;
+    top: -35%;
+    left: 0;
+    right: 0;
+  }
+
+  .top__left--front h3 {
+    font-size: 2em;
+    text-align: center;
+    color: #037a0b;
+  }
+
+  .top__left--title {
+    text-align: center;
+    color: #037a0b;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+  }
+
+  .top__left--text {
+    text-align: center;
+    color: #037a0b;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    margin-top: 0.5em;
+  }
+
+  .top-btn {
+    display: inline-block;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .top-btn a {
+    color: #f14924;
+    text-decoration: none;
+    border: solid 2px #f14924;
+    border-radius: 3px;
+    padding: 0.2em 0.1em;
+  }
+
+  .top-btn:active {
+    background: #f14924;
+    color: #fff;
+  }
+
+/* -----上に戻るボタン(topコンテンツから表示)----- */
+
+  #top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
+    line-height: 0.5;
+    z-index: 99;
+  }
+  #top a {
+    background: #72C7CA;
+    color: #fff;
+    width: 60px;
+    padding: 15px 0;
+    text-align: center;
+    display: block;
+    border-radius: 90px;
+    opacity: 0.5;
+    transition: all .3s ease;
+  }
+
+/* -----middleコンテンツ----- */
+
+  .middle__left--sp {
+    height: 300px;
+    position: relative;
+    margin-top: -1.5em;
+  }
+
+  .middle__left--sp img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .middle__right {
+    height: 150px;
+    width: 100%;
+    position: relative;
+  }
+
+  .middle__right--back {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    right: 0;
+  }
+
+  .middle__right--back p {
+    font-size: 5.2em;
+    text-align: center;
+    color: #fff;
+  }
+
+ .middle__right--front {
+    position: absolute;
+    top: -35%;
+    left: 0;
+    right: 0;
+  }
+
+  .middle__right--front h3 {
+    font-size: 2em;
+    text-align: center;
+    color: #037a0b;
+  }
+
+  .middle__right--title {
+    text-align: center;
+    color: #037a0b;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+  }
+
+  .middle__right--text {
+    text-align: center;
+    color: #037a0b;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    margin-top: 0.5em;
+  }
+
+  .middle-btn {
+    display: inline-block;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .middle-btn a {
+    color: #f14924;
+    text-decoration: none;
+    border: solid 2px #f14924;
+    border-radius: 3px;
+    padding: 0.2em 0.1em;
+  }
+
+  .middle-btn:active {
+    background: #f14924;
+    color: #fff;
+  }
+
+/* ------bottomコンテンツ------ */
+
+  .bottom__image--sp {
+    height: 300px;
+    position: relative;
+  }
+
+  .bottom__image--sp img{
+    height: 300px;
+    width: 320px;
+    position: absolute;
+    top: -35%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .bottom__left {
+    height: 150px;
+    width: 100%;
+    position: relative;
+  }
+
+  .bottom__left--back {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+  }
+
+  .bottom__left--back p {
+    font-size: 5.2em;
+    text-align: center;
+    color: #fff;
+  }
+
+  .bottom__left--front {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+  }
+
+  .bottom__left--front h3 {
+    font-size: 2em;
+    text-align: center;
+    color: #037a0b;
+  }
+
+  .bottom-btn {
+    display: inline-block;
+    margin-top: -1.5em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bottom-btn a {
+    color: #f14924;
+    text-decoration: none;
+    border: solid 2px #f14924;
+    border-radius: 3px;
+    padding: 0.2em 0.1em;
+  }
+
+/* -----------footer----------- */
+
+  footer {
+    height: 150px;
+    width: 100%;
+    background-color: #7ebf41;
+    margin-top: 15%;
+  }
+
+  .footer__left {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__left img {
+    margin-top: 3%;
+  }
+
+  .footer__center ul {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 25px;
+    color: #333333;
+    list-style: none;
+  }
+
+  .footer__center li {
+    margin: auto;
+  }
+
+  .footer__center a {
+    text-decoration: none;
+    color: #333333;
+  }
+
+  .footer__right {
+    font-size: 15px;
+    color: #333333;
+    text-align: center;
+  }
 }
 
 /* ----------PC用コーディング---------- */
+
 @media screen and (min-width: 1024px) {
-/* ----------header---------- */
   .pc { display: block !important; }
   .sp { display: none !important; }
+  .top__right--sp, .middle__left--sp, .bottom__image--sp { display: none !important; }
+
+/* ----------header---------- */
 
   header {
     height: 790px;
@@ -122,12 +433,6 @@ body {
     transition: all 1.5s ease-out;
   }
 
-  /* ----------main--------- */
-  main {
-    width: 100%;
-    background-color: #e1f3f9;
-  }
-
   /* -----topコンテンツ------ */
 
   .top{
@@ -144,7 +449,7 @@ body {
     left: 95px;
   }
 
-  .top__left h3 {
+  .top__left--front {
     font-size: 40px;
     letter-spacing: 5px;
     color: #037a0b;
@@ -172,14 +477,17 @@ body {
   .top-btn {
     display: inline-block;
     padding: 0.3em 1em;
-    text-decoration: none;
-    color: #f14924;
     border: solid 2px #f14924;
     border-radius: 3px;
     transition: .4s;
     position: absolute;
     top: 520px;
     left: 100px;
+  }
+
+  .top-btn a {
+    text-decoration: none;
+    color: #f14924;
   }
 
   .top-btn:hover {
@@ -223,6 +531,7 @@ body {
     line-height: 0.5;
     z-index: 99;
   }
+
   #top a {
     background: #72C7CA;
     color: #fff;
@@ -234,6 +543,7 @@ body {
     opacity: 0.7;
     transition: all .3s ease;
   }
+
   #top a:hover {
     text-decoration: none;
     opacity: 0.9;
@@ -259,7 +569,7 @@ body {
     right: 220px;
   }
 
-  .middle__right h3 {
+  .middle__right--front {
     font-size: 40px;
     letter-spacing: 5px;
     color: #037a0b;
@@ -287,14 +597,17 @@ body {
   .middle-btn {
     display: inline-block;
     padding: 0.3em 1em;
-    text-decoration: none;
-    color: #f14924;
     border: solid 2px #f14924;
     border-radius: 3px;
     transition: .4s;
     position: absolute;
     top: 520px;
     right: 588px;
+  }
+
+  .middle-btn a {
+    text-decoration: none;
+    color: #f14924;
   }
 
   .middle-btn:hover {
@@ -341,7 +654,7 @@ body {
     left: 95px;
   }
 
-  .bottom__left h3 {
+  .bottom__left--front {
     font-size: 40px;
     letter-spacing: 3px;
     color: #037a0b;
@@ -393,17 +706,20 @@ body {
     width: 380px;
   }
 
-  .bottom-btn a {
+  .bottom-btn {
     display: inline-block;
     padding: 0.3em 1em;
-    text-decoration: none;
-    color: #f14924;
     border: solid 2px #f14924;
     border-radius: 3px;
     transition: .4s;
     position: absolute;
     top: 800px;
     right: 665px;
+  }
+
+  .bottom-btn a {
+    text-decoration: none;
+    color: #f14924;
   }
 
   .bottom-btn a:hover {
