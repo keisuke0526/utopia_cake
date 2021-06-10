@@ -124,7 +124,7 @@ $(function () {
     var height = $(window).height();
     var scrollPos = scroll + (height * 1);
 
-    $(".bottom__images").each(function () {
+    $(".bottom__contents").each(function () {
       if ($(this).offset().top < scrollPos) {
         $(this).css({ opacity: 1, transform: 'translate(0, 0)' });
       }
