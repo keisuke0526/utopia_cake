@@ -562,14 +562,14 @@ body {
     font-size: 1.25em;
     position: absolute;
     top: -11.5em;
-    right: 14.6em;
+    right: 17em;
     text-align: initial;
   }
 
   .middle-btn {
     position: absolute;
     top: -8.5em;
-    right: 36.5em;
+    right: 37em;
     transition: .4s;
   }
 
