@@ -8,10 +8,8 @@ body {
 }
 
 @media screen and (max-width: 768px){
-  .pc { display: none !important; }
-  .sp { display: block !important; }
-  .bottom__image--sp { display: block !important; }
-  .top__right, .middle__left, .bottom__contents { display: none !important; }
+  .pc, .top__right, .middle__left, .bottom__contents { display: none !important; }
+  .sp, .bottom__image--sp { display: block !important; }
 }
 
   /* -----header----- */
@@ -380,11 +378,8 @@ body {
 /* ----------PC用コーディング---------- */
 
 @media screen and (min-width: 1025px) {
-  .pc { display: block !important; }
-  .sp { display: none !important; }
-  .top__right--sp, .middle__left--sp, .bottom__image--sp, .bottom__image--sp { display: none !important; }
-
-  .top__right, .middle__left, .bottom__images, .bottom__images--left, .bottom__images--middle, .bottom__images--right { display: block !important; }
+  .pc, .top__right, .middle__left{ display: block !important; }
+  .sp, .top__right--sp, .middle__left--sp, .bottom__image--sp, .bottom__image--sp { display: none !important; }
 
 /* ----------header---------- */
 
