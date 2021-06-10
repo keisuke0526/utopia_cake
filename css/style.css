@@ -7,10 +7,8 @@ body {
   background-color: #e1f3f9;
 }
 
-@media screen and (max-width: 768px){
+
   .pc, .top__right, .middle__left, .bottom__contents { display: none !important; }
-  .sp, .bottom__image--sp { display: block !important; }
-}
 
   /* -----header----- */
 
@@ -86,14 +84,14 @@ body {
   }
 
   .top__left {
-    height: 150px;
+    height: 9.375em;
     width: 100%;
     position: relative;
   }
 
   .top__left--back {
     position: absolute;
-    top: -50%;
+    top: -5em;
     left: 0;
     right: 0;
     letter-spacing: 3px;
@@ -108,7 +106,7 @@ body {
 
   .top__left--front {
     position: absolute;
-    top: -35%;
+    top: -3.5em;
     left: 0;
     right: 0;
     color: #037a0b;
@@ -123,14 +121,14 @@ body {
   .top__left--title {
     text-align: center;
     color: #037a0b;
-    font-size: 15px;
+    font-size: 1em;
     letter-spacing: 0.08em;
   }
 
   .top__left--text {
     text-align: center;
     color: #037a0b;
-    font-size: 10px;
+    font-size: 0.625em;
     letter-spacing: 0.08em;
     margin-top: 0.5em;
   }
@@ -176,7 +174,7 @@ body {
 /* -----middleコンテンツ----- */
 
   .middle__left--sp {
-    height: 300px;
+    height: 18.75em;
     position: relative;
     margin-top: -1.5em;
   }
@@ -191,14 +189,14 @@ body {
   }
 
   .middle__right {
-    height: 150px;
+    height: 9.375em;
     width: 100%;
     position: relative;
   }
 
   .middle__right--back {
     position: absolute;
-    top: -50%;
+    top: -5em;
     left: 0;
     right: 0;
   }
@@ -211,7 +209,7 @@ body {
 
  .middle__right--front {
     position: absolute;
-    top: -35%;
+    top: -3.5em;
     left: 0;
     right: 0;
   }
@@ -225,14 +223,14 @@ body {
   .middle__right--title {
     text-align: center;
     color: #037a0b;
-    font-size: 15px;
+    font-size: 1em;
     letter-spacing: 0.08em;
   }
 
   .middle__right--text {
     text-align: center;
     color: #037a0b;
-    font-size: 10px;
+    font-size: 0.625em;
     letter-spacing: 0.08em;
     margin-top: 0.5em;
   }
@@ -260,19 +258,241 @@ body {
 /* ------bottomコンテンツ------ */
 
   .bottom__image--sp {
-    height: 300px;
+    height: 18.75em;
     position: relative;
   }
 
   .bottom__image--sp img{
-    height: 300px;
-    width: 320px;
+    height: 18.75em;
+    width: 20em;
     position: absolute;
-    top: -35%;
+    top: -3.5em;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
+  }
+
+  .bottom__left {
+    height: 9.375em;
+    width: 100%;
+    position: relative;
+  }
+
+  .bottom__left--back {
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    right: 0;
+  }
+
+  .bottom__left--back p {
+    font-size: 5.2em;
+    text-align: center;
+    color: #fff;
+  }
+
+  .bottom__left--front {
+    position: absolute;
+    top: 2em;
+    left: 0;
+    right: 0;
+  }
+
+  .bottom__left--front h3 {
+    font-size: 2em;
+    text-align: center;
+    color: #037a0b;
+  }
+
+  .bottom-btn {
+    display: inline-block;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bottom-btn a {
+    color: #f14924;
+    text-decoration: none;
+    border: solid 2px #f14924;
+    border-radius: 3px;
+    padding: 0.2em 0.1em;
+  }
+
+/* -----------footer----------- */
+
+  footer {
+    height: 9.375em;
+    width: 100%;
+    background-color: #7ebf41;
+    margin-top: 15%;
+  }
+
+  .footer__left {
+    height: 6.25em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__left img {
+    margin-top: 3%;
+  }
+
+  .footer__center ul {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 1.5625em;
+    color: #333333;
+    list-style: none;
+  }
+
+  .footer__center li {
+    margin: auto;
+  }
+
+  .footer__center a {
+    text-decoration: none;
+    color: #333333;
+  }
+
+  .footer__right {
+    font-size: 1em;
+    color: #333333;
+    text-align: center;
+  }
+
+
+/* ----------タブレット用コーディング---------- */
+@media screen and (min-width: 600px) and (max-width:1024px) {
+  .pc, .top__right, .middle__left, .bottom__contents { display: block !important; }
+  .sp, .top__right--sp, .middle__left--sp, .bottom__image--sp, .bottom__image--sp { display: none !important; }
+
+  header {
+    /* height: 900px; */
+    background-image: url("../img/header_pc.jpg");
+    background-size:cover;
+  }
+
+  .header-text h1 {
+    position: absolute;
+    top: 3.5em;
+    left: 1.5em;
+  }
+
+  .top {
+    height: 21.25em;
+  }
+
+ .top__left {
+    height: 150px;
+    width: 100%;
+    position: relative;
+  }
+
+  .top__left--back {
+    position: absolute;
+    top: 4em;
+    left: -20em;
+  }
+
+  .top__left--front {
+    position: absolute;
+    top: 5.2em;
+    left: -18em;
+  }
+
+  .top__left--title {
+    position: absolute;
+    top: 9.5em;
+    left: 3.5em;
+    text-align: initial;
+  }
+
+  .top__left--text {
+    position: absolute;
+    top: 18.5em;
+    left: 5.5em;
+    text-align: initial;
+  }
+
+  .top-btn {
+    position: absolute;
+    top: 14em;
+    left: 3.4em;
+  }
+
+  .top__right img {
+    height: 14em;
+    width: 18em;
+    position: absolute;
+    top: -6em;
+    right: 3.5em;
+  }
+
+/* -----middleコンテンツ----- */
+
+  .middle {
+    height: 21.25em;
+    margin-top: 3em;
+  }
+
+  .middle__right {
+    height: 150px;
+    width: 100%;
+    position: relative;
+  }
+
+  .middle__right--back {
+    position: absolute;
+    top: -2em;
+    left: 21em;
+  }
+
+ .middle__right--front {
+    position: absolute;
+    top: -0.5em;
+    left: 20em;
+  }
+
+  .middle__right--title {
+    position: absolute;
+    top: 3em;
+    right: 3.5em;
+    text-align: initial;
+  }
+
+  .middle__right--text {
+    position: absolute;
+    top: 9em;
+    right: 16.5em;
+    text-align: initial;
+  }
+
+  .middle-btn {
+    position: absolute;
+    top: 8em;
+    right: 16.5em;
+  }
+
+  .middle__left img {
+    position: absolute;
+    left: 3em;
+    top: -2em;
+    height: 14em;
+    width: 18em;
+  }
+
+/* -----bottomコンテンツ----- */
+
+  .bottom {
+    margin-top: -5em;
+    height: 28.125em;
   }
 
   .bottom__left {
@@ -301,84 +521,41 @@ body {
     right: 0;
   }
 
-  .bottom__left--front h3 {
-    font-size: 2em;
-    text-align: center;
-    color: #037a0b;
-  }
-
   .bottom-btn {
-    display: inline-block;
-    margin-top: -1.5em;
-    display: flex;
-    justify-content: center;
-
+    position: absolute;
+    top: 102em;
+    right: 0em;
+    left: 0em;
   }
 
-  .bottom-btn a {
-    color: #f14924;
-    text-decoration: none;
-    border: solid 2px #f14924;
-    border-radius: 3px;
-    padding: 0.2em 0.1em;
+  .bottom__contents {
+    width: 88%;
+    margin: auto;
+    text-align: center;
   }
 
-/* -----------footer----------- */
+  .bottom__contents--item {
+    list-style: none;
+    margin: auto;
+    display: inline;
+  }
+
+  .bottom__contents--item img {
+    height: 190px;
+    width: 200px;
+  }
 
   footer {
-    height: 150px;
-    width: 100%;
-    background-color: #7ebf41;
-    margin-top: 15%;
+    margin-top: 4em;
   }
 
-  .footer__left {
-    height: 100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .footer__left img {
-    margin-top: 3%;
-  }
-
-  .footer__center ul {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    font-size: 25px;
-    color: #333333;
-    list-style: none;
-  }
-
-  .footer__center li {
-    margin: auto;
-  }
-
-  .footer__center a {
-    text-decoration: none;
-    color: #333333;
-  }
-
-  .footer__right {
-    font-size: 15px;
-    color: #333333;
-    text-align: center;
-  }
-
-
-/* ----------タブレット用コーディング---------- */
-
+}
 
 
 /* ----------PC用コーディング---------- */
 
-@media screen and (min-width: 1025px) {
-  .pc, .top__right, .middle__left{ display: block !important; }
+@media screen and (min-width: 1280px) {
+  .pc, .top__right, .middle__left, .bottom__contents { display: block !important; }
   .sp, .top__right--sp, .middle__left--sp, .bottom__image--sp, .bottom__image--sp { display: none !important; }
 
 /* ----------header---------- */
@@ -612,7 +789,8 @@ body {
   .bottom__left--back {
     position: absolute;
     top: -5em;
-    left: 5em;
+    left: 0;
+    right: 0;
   }
 
   .bottom__left--back p {
@@ -623,7 +801,7 @@ body {
   .bottom__left--front {
     position: absolute;
     top: -2.5em;
-    left: 42em;
+    left: 39em;
   }
 
   .bottom__left--front h3 {
@@ -633,15 +811,15 @@ body {
   }
 
   .bottom__contents {
-    display: flex;
-    justify-content: center;
     width: 88%;
     margin: auto;
+    text-align: center;
   }
 
   .bottom__contents--item {
     list-style: none;
     margin: auto;
+    display: inline;
   }
 
   .bottom__contents--item img {
@@ -681,37 +859,22 @@ body {
   /* ----------footer---------- */
 
   footer {
-    height: 150px;
-    width: 100%;
-    background-color: #7ebf41;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
 
   .footer__left {
-    height: 100px;
     width: 250px;
-    display: flex;
-    align-items: center;
     margin-top: 10px;
   }
 
-  .footer__center ul {
-    display: flex;
-    align-items: center;
-    font-size: 25px;
-    color: #333333;
-    list-style: none;
+  .footer__center {
+    width: 30%;
   }
 
   .footer__center li {
     margin-right: 15px;
-  }
-
-  .footer__center a {
-    text-decoration: none;
-    color: #333333;
   }
 
   .footer__center a:hover {
@@ -722,6 +885,5 @@ body {
 
   .footer__right {
     font-size: 25px;
-    color: #333333;
   }
 }
